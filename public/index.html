@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/style.css">
+
+   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+
+   <nav class="relative py-3 bg-gray-900 md:p-4" x-data="{ open: false }">
+      <div class="px-5 md:max-w-6xl md:px-3 md:mx-auto">
+         <span class="text-sm text-white md:hidden">Navigation</span>
+         <ul class="hidden text-gray-100 md:flex">
+            <li class="mr-4"><a href="#">PSD Websites</a></li>
+            <li class="mr-4"><a href="#">Ui Kits</a></li>
+            <li class="mr-4"><a href="#">Premium PSD Files</a></li>
+            <li class="mr-4"><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+         </ul>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center justify-center px-3 text-white bg-black md:hidden">
+         <button class="w-6 h-6 focus:outline-none" @click="open = true">
+            <div x-show="! open">
+               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+               </svg>
+            </div>
+            <div x-show="open">
+               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </div>
+         </button>
+      </div>
+      <ul class="absolute right-0 p-5 mt-3 text-white uppercase bg-gray-900" x-show.transition.in="open" @click.away="{open = false}">
+         <li class="mb-2"><a href="#">PSD Websites</a></li>
+         <li class="mb-2"><a href="#">Ui Kits</a></li>
+         <li class="mb-2"><a href="#">Premium PSD Files</a></li>
+         <li class="mb-2"><a href="#">About</a></li>
+         <li><a href="#">Blog</a></li>
+      </ul>
+   </nav>
+
+   <header class="py-16 text-white sm:py-20 md:py-40 bg-gradient-to-r from-blue-400 to-blue-600">
+      <div class="max-w-6xl px-3 mx-auto">
+         <div class="table">
+            <h1 class="text-3xl font-light leading-tight sm:text-5xl md:text-6xl">Awesome Free PSD <br>templates & Resources</h1>
+            <div class="flex items-center justify-between mt-5">
+               <a href="#" class="opacity-75">www.BlazRobar.com</a>
+               <div class="w-4 h-4 sm:w-5 sm:h-5 md:w-8 md:h-8">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <div class="relative py-8 bg-gray-900">
+      <div class="max-w-6xl px-3 mx-auto">
+         <p class="text-xs text-purple-200 sm:text-sm md:text-lg">I'm like the Robin Hood of PSD files.</p>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center justify-center w-20 h-full text-white bg-pink-600 md:w-24">
+         <div class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+         </div>
+      </div>
+   </div>
+
+   <div class="grid grid-cols-1 md:grid-cols-3">
+      <div class="flex items-center justify-center py-32 text-4xl bg-purple-900 md:py-0 ">
+         <div class="w-10 h-10 text-white sm:w-12 sm:h-12">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+         </div>
+      </div>
+      <div class="">
+         <img class="" src="./img/2.jpg" alt="">
+      </div>
+      <div class="">
+         <img class="" src="./img/3.jpg" alt="">
+      </div>
+   </div>
+   <div class="py-8 bg-gray-300">
+      <div class="max-w-6xl px-3 mx-auto">
+         <h3 class="mt-0 mb-4 text-xl font-medium text-blue-600 sm:text-2xl">BlazRobar.com</h3>
+         <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+            <div>
+               <p class="mb-5 text-sm leading-normal sm:text-base">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
+                  odio dolore fuga natus, libero quod, expedita modi necessitatibus voluptatum ipsam culpa ad
+                  exercitationem. Aut commodi ipsum fugit odio aspernatur doloremque!</p>
+            </div>
+            <div>
+               <p class="text-sm leading-normal sm:text-base">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente odio
+                  dolore fuga natus, libero quod, expedita modi necessitatibus voluptatum ipsam culpa ad exercitationem.
+                  Aut commodi ipsum fugit odio aspernatur doloremque!</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
